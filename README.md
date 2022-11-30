@@ -33,7 +33,9 @@ field (which is used for LRU replacement) of the cache. Also, you may update the
 If the requested memory block is not in your cache, you need to allocate a cache block by either finding an empty space or evicting a cache block that
 is least recently used in the given cache set. After that, you need to update the tag information and other fields (valid, age, and dirty). Since we
 assume that our cache is write-allocate, you need to properly set the relevant field according to the access type.
-    
+
+Finally, our simulator counts total number of hits, misses, and write-backs for a given trace file. So, we need to update the values through call-by-reference in `access_cache()`.
+
 __Sample files__  
 Each sample file in `sample_input` directory has two columns. The first column stands for 
 a type of operations such as "R" for Read and "W" for Write. The second column is an address value.

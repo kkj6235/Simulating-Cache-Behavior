@@ -84,7 +84,7 @@ static void xdump(struct sce212cache* cache)
   n_ways = cache->n_ways;
   n_sets = 1 << set_b;
 
-  printf("Cache Content:\n");
+  printf("Cache Tags:\n");
   printf("-------------------------------------\n");
 
   for (int w = 0; w < n_ways; w++) {
@@ -156,12 +156,14 @@ int main(int argc, char *argv[])
       case 'x':
         xflag = 1;
         break;
-
-      default:
-        fprintf(stderr, "Usage: %s -c cap:assoc:block_size [-x] input_trace \n", argv[0]);
-				return 1;
     }
   }
+
+  if (optind+1 > argc) {
+      fprintf(stderr,  "Usage: %s [-c cap:assoc:block_size] [-x] input_trace \n", argv[0]);
+      exit(EXIT_FAILURE);
+  }
+
 
   /* TODO: Define a cache based on the struct declaration */
   build_cache(&simCache, block_size, n_ways, capacity);

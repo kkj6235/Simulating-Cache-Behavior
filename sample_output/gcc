@@ -14,7 +14,7 @@ Write hits: 71
 Read misses: 90451
 Write misses: 1972
 
-Cache Content:
+Cache Tags:
 -------------------------------------
           WAY[0]      WAY[1]      WAY[2]      WAY[3]      WAY[4]      WAY[5]      WAY[6]      WAY[7]
 SET[0]:   0x04cb2680  0x04cb2300  0x04cb2600  0x04cb2400  0x04cb2380  0x04cb2480  0x04cb2500  0x04cb2580  

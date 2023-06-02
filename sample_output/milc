@@ -14,7 +14,7 @@ Write hits: 140224
 Read misses: 19640
 Write misses: 6355
 
-Cache Content:
+Cache Tags:
 -------------------------------------
           WAY[0]      WAY[1]      WAY[2]      WAY[3]      WAY[4]      WAY[5]      WAY[6]      WAY[7]
 SET[0]:   0x000dbc00  0x000cd300  0x0009e700  0x0009fa00  0x08bdf300  0x0009f880  0x000dbc80  0x0009f680  
